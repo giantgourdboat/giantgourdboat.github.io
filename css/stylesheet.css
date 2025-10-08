@@ -1,0 +1,449 @@
+@font-face {
+    font-family: "Yu_Gothic";
+    src: url("../font/Yu_Gothic/Yu_Gothic_Light/Yu_Gothic_Light.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: 'Yu_Gothic', sans-serif;
+    background: #fff;
+    color: #000;
+    padding-bottom: 100px;
+}
+
+.header {
+    background: white;
+    padding: 0px 0 0px 0; 
+    border-bottom: 1px solid #000;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding-right: 39px;
+}
+
+nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    width: 120px;
+    text-align: center;
+}
+
+nav a.active {
+    background: #000;
+    color: #fff;
+}
+
+/* PORTFOLIO/INDEX SIVU */
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    padding: 0 16px;
+}
+
+.divider {
+    position: fixed;
+    top: 100px;
+    bottom: 30%;
+    left: 49.8%;
+    width: 1px;
+    background: #000;
+}
+
+
+.profile {
+    position: absolute;
+    top: 112px;
+    right: calc(50% + 12px);
+    width: 200px;
+    text-align: right;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 0px;
+    object-fit: contain;
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile h3 {
+    font-size: 1rem;
+    color: #444;
+    margin: 0;
+}
+
+.experience {
+    position: absolute;
+    top: 100px;
+    left: calc(50% + 12px);
+    width: 300px;
+}
+
+.job {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.job::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5px;
+    left: 0;
+    height: 1px;
+    background: #000;
+    width: 80%;
+}
+
+.job:nth-child(2)::after {
+    width: 60%;
+}
+
+.job:nth-child(3)::after {
+    width: 45%;
+}
+
+.job h2{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+}
+
+.job p {
+    margin: 0 0 4px 0;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* PROJECTS SIVU */
+
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px 16px;
+}
+
+.project-box {
+    flex: 1 1 300px;
+    max-width: 250px;
+    background-color: #f9f9f9;
+    border: 1.5px solid #000000;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-bottom: 0;
+    object-fit: contain;
+}
+
+
+.project-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex: 1 1 300px;
+    max-width: 250px;
+}
+
+.project-box h2 {
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.project-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 1px;
+    background: #000;
+}
+
+
+/* CONTACTS SIVU */
+
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 128px;
+    padding: 60px 120px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    resize: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form button {
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+    background: #333;
+}
+
+.contact-info {
+    flex: 1 1 200px;
+    margin: 0;
+}
+
+.contact-info h2 {
+    margin-bottom: 0px;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.contact-info p {
+    margin-top: 0;
+    color: #444;
+}
+
+.social-links {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links img {
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding-top: 0;
+    padding-right: 10px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 24px 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .social-links a {
+        display: inline-block;
+        margin: 0 8px;
+    }
+}
+
+.footer span {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-right: 11px;
+}
+
+
+/* Responsiivisuus */
+@media (max-width: 700px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px auto 0 auto;
+        padding: 0 16px;
+        max-width: 600px;
+        position: static;
+
+        /*PORTFOLIO*/
+    }
+    .divider {
+        display: none;
+    }
+    .profile {
+        position: static;
+        margin-right: 0;
+        align-items: center;
+        text-align: center;
+        padding-top: 0;
+        width: auto;
+    }
+    .experience {
+        position: static;
+        width: 100%;
+        margin-top: 32px;
+        padding-top: 0;
+        text-align: center;
+    }
+
+        .job {
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .job::after {
+        content: '';
+        position: absolute;
+        bottom: 0.5px;
+        left: 19%;
+        height: 1px;
+        background: #000;
+        width: 63%;
+    }
+
+    .job:nth-child(2)::after {
+        width: 53%;
+        left: 25%;
+    }
+
+    .job:nth-child(3)::after {
+        width: 23%;
+        left: 38%;
+    }
+
+    /*PROJECTS*/
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+
+
+/* CONTACT */
+
+    .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 16px;
+    flex-wrap: wrap;
+}
+
+
+.contact-form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 135%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    resize: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-info {
+    text-align: center;
+    width: 100%;
+    padding-left: 55px;
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 0px;
+}
+
+
+
+}
+
