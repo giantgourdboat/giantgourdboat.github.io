@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Päivän sisältö</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
 
     <style> 
     /* Perustyylit */
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background: url('Kalenterikuva5.jpg') no-repeat center center fixed;
+            font-family: "Mountains of Christmas", serif;
+            background-image: url(Kuvat/luukku15.avif);
             background-size: cover;
             color: #ffffff;
+
         }
 
         /* Yläbanneri */
@@ -22,10 +26,12 @@
             color: #ffffff;
             text-align: center;
             padding: 15px;
-            font-size: 1.5em;
-            border-radius: 10px;
+            font-size: 2em;
+            border-radius: 3px;
             width: 60%;
             margin: 20px auto;
+            border: 2px solid #000000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.3);
         }
 
         /* Päälaatikot */
@@ -36,8 +42,9 @@
             margin-top: 30px;
         }
 
+        
         .box {
-            background-color: #1f5d6b;
+            background-color: rgb(94, 126, 138);
             color: #ffffff;
             width: 250px;
             height: 250px;
@@ -46,7 +53,29 @@
             align-items: center;
             text-align: center;
             border: 2px solid #0f3a44;
-            font-size: 1em;
+            font-size: 1.5em;
+            border-radius: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .box2 {
+            background-color: rgb(94, 126, 138);
+            color: #ffffff;
+            width: 250px;
+            height: 250px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            
+
+            border: 2px solid #0f3a44;
+            font-size: 1.5em;
+            border-radius: 3px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 16px 32px rgba(0, 0, 0, 0.3);
+
         }
 
         /* Linkit */
@@ -66,7 +95,7 @@
 
     <div class="container">
         <div class="box">
-            <p>Hyvää nimipäivää<br>Merilla, Vellamolle</p>
+            <p>Hyvää nimipäivää<br>Heimo ja Nooa!</p>
         </div>
         <div class="box">
             
@@ -77,11 +106,12 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
-        height="250"
+      height="250"
+      width="250"
         ></iframe>
  
         </div>
-        <div class="box">
+        <div class="box2">
             <p>Päivän pulmapelit</p>
             <a href="https://www.nytimes.com/games/wordle/index.html" target="_blank">Wordle-linkki</a><br>
             <a href="https://www.washingtonpost.com/games/crossword/" target="_blank">Crossword-linkki</a><br>
