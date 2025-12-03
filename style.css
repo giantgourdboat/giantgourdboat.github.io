@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  /* TAUSTAKUVAN TEMPLATE
+  background-image: url("oma-taustakuva.jpg");
+  background-size: cover;
+  background-position: center;
+  */
+  background-image: url(Kuvat/indexTausta.avif) ;
+}
+
+.container {
+  width: 900px;
+  height: 650px;
+  border: 3px solid black;
+  margin: 15px auto;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.15);
+
+  box-shadow: 
+  0 4px 8px rgba(0, 0, 0, 0.3),
+  0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.luukku {
+  background: #b30000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: transform 0.2s, background 0.3s;
+  user-select: none;
+}
+
+.luukku:hover {
+  transform: scale(1.08);
+}
+
+.avaa {
+  background: #006400 !important;
+  color: #fff;
+}
