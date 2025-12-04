@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luukku 24</title>
+    <style>
+        body { margin: 0; background: linear-gradient(180deg, #8b0000, #b22222); color: #fff; font-family: 'Arial', sans-serif; text-align: center; overflow: hidden; position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        h1 { font-size: 3em; color: #ff0000; text-shadow: 0 0 15px red; animation: glow 2s ease-in-out infinite; margin-bottom: 20px; }
+        @keyframes glow { 0%, 100% { text-shadow: 0 0 10px red; } 50% { text-shadow: 0 0 30px red; } }
+        .tervehdys { font-size: 1.4em; margin-bottom: 30px; animation: fadeIn 3s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        iframe { width: 80%; max-width: 800px; height: 450px; border-radius: 15px; box-shadow: 0 0 30px rgba(178, 34, 34, 0.5); margin-bottom: 20px; }
+        .sparkle { position: absolute; top: -20px; font-size: 2em; color: #ffd700; animation: fall linear infinite; pointer-events: none; }
+        @keyframes fall { to { top: 100vh; transform: translateY(100vh) rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <h1>Luukku 24</h1>
+    <p class="tervehdys">Joulurauhaa</p>
+    <iframe src="https://www.youtube.com/embed/wDNWM7RsqI4" title="O Holy Night" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            let sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.innerHTML = '✨';
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.animationDuration = (Math.random() * 10 + 5) + 's';
+            sparkle.style.opacity = Math.random() * 0.5 + 0.5;
+            sparkle.style.fontSize = (Math.random() * 1 + 1) + 'em';
+            document.body.appendChild(sparkle);
+        }
+    </script>
+</body>
+</html>
