@@ -37,7 +37,7 @@ body {
 }
 
 .luukku {
-  background: #b300002b;
+  background: linear-gradient(93deg,rgba(255, 58, 58, 0.75) 0%, rgba(212, 34, 6, 0.75) 100%);  color: white;
   color: white;
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@ body {
   font-weight: bold;
   border-radius: 2px;
   cursor: pointer;
-  border: 2px solid #ffffff62;
+  border: 2px solid #ffffff;
   border-style: dashed;
   transition: transform 0.2s, background 0.3s;
   user-select: none;
@@ -61,6 +61,7 @@ body {
   background: #006400 !important;
   color: #fff;
 }
+
 
 
 
