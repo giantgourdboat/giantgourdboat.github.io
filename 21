@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luukku 21</title>
+    <style>
+        body { margin: 0; background: linear-gradient(180deg, #4b0082, #8b008b); color: #fff; font-family: 'Georgia', serif; text-align: center; overflow: hidden; position: relative; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        h1 { font-size: 3em; color: #ff69b4; text-shadow: 0 0 15px pink; animation: pulse 1.5s infinite; margin-bottom: 20px; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .tervehdys { font-size: 1.4em; margin-bottom: 30px; animation: fadeIn 3s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        iframe { width: 80%; max-width: 800px; height: 450px; border-radius: 15px; box-shadow: 0 0 30px rgba(255, 105, 180, 0.5); margin-bottom: 20px; }
+        .star { position: absolute; top: -20px; font-size: 2em; color: gold; animation: fall linear infinite; pointer-events: none; }
+        @keyframes fall { to { top: 100vh; transform: translateY(100vh) rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <h1>Luukku 21</h1>
+    <p class="tervehdys">Hiljainen yö</p>
+    <iframe src="https://www.youtube.com/embed/UyXsWGNCJbA" title="Silent Night" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            let star = document.createElement('div');
+            star.className = 'star';
+            star.innerHTML = '★';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.animationDuration = (Math.random() * 10 + 5) + 's';
+            star.style.opacity = Math.random() * 0.5 + 0.5;
+            star.style.fontSize = (Math.random() * 1 + 1) + 'em';
+            document.body.appendChild(star);
+        }
+    </script>
+</body>
+</html>
