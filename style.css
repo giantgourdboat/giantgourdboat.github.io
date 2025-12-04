@@ -46,7 +46,7 @@ body {
   font-weight: bold;
   border-radius: 2px;
   cursor: pointer;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff62;
   border-style: dashed;
   transition: transform 0.2s, background 0.3s;
   user-select: none;
@@ -61,6 +61,7 @@ body {
   background: #006400 !important;
   color: #fff;
 }
+
 
 
 
