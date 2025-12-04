@@ -53,13 +53,15 @@ body {
 }
 
 .luukku:hover {
-  transform: scale(1.08); 
+  transform: scale(1.08);
+  box-shadow: 0 0 20px 5px rgba(255, 191, 0, 0.7);
 }
 
 .avaa {
   background: #006400 !important;
   color: #fff;
 }
+
 
 
 
