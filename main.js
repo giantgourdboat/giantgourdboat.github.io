@@ -31,6 +31,15 @@ function luoKalenteri() {
 function avaaLuukku(ruutu, numero) {
   if (ruutu.classList.contains('avaa')) return;
 
+  // Haetaan tämän päivän numero (päivä kuukaudesta)
+  const tanaan = new Date().getDate();
+
+  // Sallitaan avaus vain jos luukun numero <= tämän päivän numero
+  if (numero > tanaan) {
+    alert("Tätä luukkua ei voi avata vielä!");
+    return;
+  }
+
   ruutu.classList.add('avaa');
   ruutu.textContent = '🎁 ' + numero;
 
