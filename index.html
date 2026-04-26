@@ -46,10 +46,10 @@
       </div>
     </nav>
   </div>
-        <!-- Carousel -->
+
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-          <!-- Indicators/dots -->
+    
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
@@ -88,6 +88,7 @@
         </div>  
       </div>
     </div>
+
     <!-- Left and right controls/icons -->
     <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -277,7 +278,7 @@
       <div class="text-center">
         <p class="lead mb-4">Keittiömme salaisuudet</p>
           <div class="ratio ratio-16x9">
-           <iframe src="https://www.youtube.com/embed/9lVEHp-d5bc" title="YouTube video" allowfullscreen></iframe>
+           <iframe src="https://www.youtube.com/embed/oJqmhD-Rp7s" title="YouTube video" allowfullscreen></iframe>
           </div>
       </div>
     </div>
@@ -325,6 +326,8 @@
     </table>
   </div>
 
+
+
 <div class="lomake-container" id="lomake-osio">
   <div class="row text-center my-5">
     <h2 class="mb-4">Anna palautetta</h2>
@@ -334,12 +337,12 @@
     
     <div class="mb-3">
       <label for="nimi" class="form-label fw-bold">Nimi</label>
-      <input type="text" class="form-control" id="nimi" name="nimi" placeholder="Nimi" required>
+      <input type="text" class="form-control" id="nimi" name="nimi" placeholder="Nimi" required pattern="\+?[0-9 ()\-]+">
     </div>
 
     <div class="mb-3">
       <label for="email" class="form-label fw-bold">Sähköposti</label>
-      <input type="email" class="form-control" id="email" name="email" placeholder="Sähköposti" required>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Sähköposti" required pattern="\+?[0-9 ()\-]+">
     </div>
 
     <div class="mb-3">
@@ -372,50 +375,105 @@
       </div>
     </div>
 
-    <div class="mb-3">
-      <label class="form-label fw-bold d-block">Mitä haluaisit lisää?</label>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="lisaa" id="kuvia" value="Kuvia">
-        <label class="form-check-label" for="kuvia">Kuvia</label>
+      <div class="mb-3">
+        <label class="form-label fw-bold d-block">Mitä haluaisit lisää?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="lisaa" id="kuvia" value="Kuvia">
+          <label class="form-check-label" for="kuvia">Kuvia</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="lisaa" id="resepteja" value="Reseptejä">
+          <label class="form-check-label" for="resepteja">Menua</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="lisaa" id="tietoa" value="Tietoa tapahtumista">
+          <label class="form-check-label" for="tietoa">Tietoa tapahtumista</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="lisaa" id="arviot" value="Muiden asiakkaiden arvioita">
+          <label class="form-check-label" for="arviot">Muiden asiakkaiden arvioita</label>
+        </div>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="lisaa" id="resepteja" value="Reseptejä">
-        <label class="form-check-label" for="resepteja">Menua</label>
+
+      <div class="mb-4">
+        <label for="loysitkö" class="form-label fw-bold">Löysitkö etsimäsi sivuiltamme?</label>
+        <select class="form-select" id="loysitko" name="loysitko">
+          <option value="" selected disabled>Valitse...</option>
+          <option value="Kyllä">Kyllä</option>
+          <option value="Osittain">Osittain</option>
+          <option value="En">En</option>
+        </select>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="lisaa" id="tietoa" value="Tietoa tapahtumista">
-        <label class="form-check-label" for="tietoa">Tietoa tapahtumista</label>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-custom me-2" onclick="tulostaTiedot()">Lähetä</button>
+        <button type="reset" class="btn btn-secondary">Tyhjennä</button>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="lisaa" id="arviot" value="Muiden asiakkaiden arvioita">
-        <label class="form-check-label" for="arviot">Muiden asiakkaiden arvioita</label>
-      </div>
-    </div>
 
-    <div class="mb-4">
-      <label for="loysitkö" class="form-label fw-bold">Löysitkö etsimäsi sivuiltamme?</label>
-      <select class="form-select" id="loysitko" name="loysitko">
-        <option value="" selected disabled>Valitse...</option>
-        <option value="Kyllä">Kyllä</option>
-        <option value="Osittain">Osittain</option>
-        <option value="En">En</option>
-      </select>
-    </div>
-
-    <div class="text-center">
-      <button type="submit" class="btn btn-custom me-2" onclick="tulostaTiedot()">Lähetä</button>
-      <button type="reset" class="btn btn-secondary">Tyhjennä</button>
-    </div>
-
-  </form>
-
-  <div id="tuloste" class="mt-4 p-4 bg-light rounded d-none" style="max-width: 600px; margin: 0 auto;">
-    <h4 class="mb-3 text-success">✅ Kiitos palautteestasi!</h4>
-    <div id="yhteenveto"></div>
-  </div>
-
+    </form>
 </div>
 
+<div id="tuloste" class="mt-4 p-4 bg-light d-none">
+  <h4 class="mb-3">Kiitos palautteestasi!</h4>
+  <div id="yhteenveto"></div>
 </div>
+
+<script>
+function tulostaTiedot() {
+  
+  //tekstit
+  var nimi = document.getElementById("nimi").value;
+  var email = document.getElementById("email").value;
+  var puhelin = document.getElementById("puhelin").value;
+  var viesti = document.getElementById("viesti").value;
+  
+  //nappi
+  var arvio = "Ei valittu";
+  var radios = document.getElementsByName('arvio');
+  for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) {
+      arvio = radios[i].value;
+      break;
+    }
+  }
+  
+  //valinta boksi
+  var lisaaTeksti = "Ei valintoja";
+  var boxit = document.getElementsByName('lisaa');
+  var valitut = [];
+  for (var i = 0, length = boxit.length; i < length; i++) {
+    if (boxit[i].checked) {
+      valitut.push(boxit[i].value);
+    }
+  }
+  if (valitut.length > 0) {
+    lisaaTeksti = valitut.join(", ");
+  }
+  
+  //valinta dropdown
+  var loysitko = "Ei valittu";
+  var selectElem = document.getElementById("loysitko");
+  if (selectElem && selectElem.selectedIndex > 0) {
+    loysitko = selectElem.options[selectElem.selectedIndex].text;
+  }
+  
+  //yhteenveto
+  var yhteenveto = "<div style='font-family: monospace; line-height: 2;'>";
+  yhteenveto += "<strong>Nimi:</strong> " + nimi + "<br>";
+  yhteenveto += "<strong>Sähköposti:</strong> " + email + "<br>";
+  yhteenveto += "<strong>Puhelin:</strong> " + (puhelin ? puhelin : "Ei annettu") + "<br>";
+  yhteenveto += "<strong>Palaute:</strong> " + (viesti ? viesti : "Ei kommentteja") + "<br>";
+  yhteenveto += "<strong>Arviosi sivuistamme:</strong> " + arvio + "<br>";
+  yhteenveto += "<strong>Mitä haluaisit lisää?:</strong> " + lisaaTeksti + "<br>";
+  yhteenveto += "<strong>Löysitkö etsimäsi?:</strong> " + loysitko;
+  yhteenveto += "</div>";
+  
+  //tuloste
+  document.getElementById("yhteenveto").innerHTML = yhteenveto;
+  document.getElementById("tuloste").classList.remove("d-none");
+  document.getElementById("tuloste").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
   </body>
   </html>
