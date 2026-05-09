@@ -10864,6 +10864,11 @@ html {
 header.masthead {
     position: relative;
     overflow: hidden;
+    padding-top: calc(12rem + 72px); 
+    padding-bottom: 7rem;
+    background: url('../assets/img/video.gif') no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
 }
 header.masthead .masthead-content {
     z-index: 1;
