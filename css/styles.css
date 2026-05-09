@@ -2319,6 +2319,20 @@ textarea.form-control-lg {
   opacity: 0.65;
 }
 
+.btn-saa {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ee0979;
+    transition: all 0.3s ease;
+}
+
+.btn-saa:hover, 
+.btn-saa:focus {
+    background-color: #ffffff !important;
+    color: #ee0979 !important;
+    border-color: #ffffff;
+}
+
 .form-range {
   width: 100%;
   height: 1.5rem;
