@@ -2,12 +2,12 @@
    "aihe":"Viikkopalaveri",
    "osallistujia":4,
    "osallistujat":[
-      "Mikko",
-      "Anna",
-      "Liisa",
-      "Pekka"
+      "Janne",
+      "Jonne",
+      "Janna",
+      "Jenna"
    ],
    "paikka":"Teams",
-   "alkaa":"15.5.2026 klo 13:00",
-   "kesto_min":90
+   "alkaa":"15.5.2026 klo 13.00",
+   "kesto":90
 }
