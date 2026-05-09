@@ -31,14 +31,14 @@
                 else if (sääkoodi >= 71 && sääkoodi <= 77) saateksti = "Lumisadetta";
                 
                 let pyorailysaa = "Erinomainen";
-                let vari = "text-success";
+                let vari = "custom-success";
                 if (lampotila < 5 || lampotila > 25 || tuuli > 15) {
                     pyorailysaa = "Haastava";
-                    vari = "text-warning";
+                    vari = "custom-warning";
                 }
                 if (lampotila < 0 || tuuli > 20) {
                     pyorailysaa = "Vaikea";
-                    vari = "text-danger";
+                    vari = "custom-danger";
                 }
                 
                 let html = "";
