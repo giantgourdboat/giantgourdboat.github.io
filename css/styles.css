@@ -10902,3 +10902,15 @@ header.masthead .masthead-subheading {
     padding-top: 3rem;    /* Lisää hieman tilaa yläreunaan */
     padding-bottom: 3rem; /* Lisää hieman tilaa alareunaan */
 }
+
+.custom-warning {
+    color: #997404 !important;
+}
+
+.custom-danger {
+    color: #B71C1C !important;
+}
+
+.custom-success {
+    color: #1B5E20 !important;
+}
