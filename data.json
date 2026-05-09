@@ -1,0 +1,27 @@
+{
+   "yritys":"Tico Cafe",
+   "yhteystiedot":{
+      "osoite":"Ratapihantie 13, Helsinki",
+      "puhelin":"040 404 4040",
+      "email":"info@ticocafe.com"
+   },
+   "tuotteet":[
+      "Makeat kahvileivät",
+      "Suolaiset piiraat",
+      "Erikoiskahvit"
+   ],
+   "henkilokunta":[
+      {
+         "nimi":"Mikko Mallikas",
+         "titteli":"Toimitusjohtaja"
+      },
+      {
+         "nimi":"Anna Malli",
+         "titteli":"Barista"
+      },
+      {
+         "nimi":"Esa Merkki",
+         "titteli":"Kondiittori"
+      }
+   ]
+}
